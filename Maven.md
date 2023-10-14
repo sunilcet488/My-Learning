@@ -56,8 +56,16 @@ enterprise repository - sap has its own for internal use
 local repository -- developer machine .m2.repository folder in the user directory
                     all the packages are place in the local repository during the maven build process, also your snapshort.jar will be also be stored over here
 
-
-
+Maven dependency
+---
+  - to skip the test `mvn install -DskipTests` will skip the test
+  - By default the packing jar/war file are build using the artifact id + version but this can be changed by using the
+    ```
+      <build>
+        <finalname></finalname>
+      </build>
+    ```
+  -  
 
 
 
