@@ -80,8 +80,10 @@ Multi module project
           <artifactid> parent artifact id </artifactid>
           <version> version of the parent</version>
        </parent>
-    ```
+      ```
   - in child pom no need to define the all the coordinates only define the artifact id
+  - How to add one submodule dependency in another submodule
+    `<dependency></dependency>
      
 
 
