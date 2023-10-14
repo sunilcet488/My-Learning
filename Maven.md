@@ -84,8 +84,15 @@ Multi module project
   - in child pom no need to define the all the coordinates only define the artifact id
   - How to add one submodule dependency in another submodule
     `<dependency></dependency>
-     
 
+  folder organisation in case multimodule project
+  ```
+    userParent      pom.xml
+          child 1   pom.xml
+          child 2   pom.xml
+  ```
+     
+**Note:** in the target folder all the compiled code that .class files along the jar dependency libraries are present inside the lib folder
 
 
 
