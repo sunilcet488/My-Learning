@@ -67,7 +67,22 @@ Maven dependency
     ```
   -  
 
-
+Multi module project
+---  
+  - Multi module project is build based on the parent child pom
+    parent pom contains
+    `coordinates` with packing type as pom and along with
+    `<module></module>`
+  -  in the child pom
+     ```
+       <parent>
+          <groupid>parent group id</groupid>
+          <artifactid> parent artifact id </artifactid>
+          <version> version of the parent</version>
+       </parent>
+    ```
+  - in child pom no need to define the all the coordinates only define the artifact id
+     
 
 
 
