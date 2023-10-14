@@ -108,7 +108,7 @@ there are six scope in Maven like
      
 Dependency Management
 ---
-In a project there could be multiple projects going on, and there might be the case where there version missmatch in the dependency used by different different project
+In a project there could be multiple projects going on, and there might be the case where there version missmatch in the dependency used by different different project. to handle such scenario we have dependeny management in place
 
 so parent pom -- junit version 3.3
     child 1 pom  junit version 3.4 
@@ -124,6 +124,9 @@ so parent pom -- junit version 3.3
     </dependencyManagement>
     ```
     No need to maintain the version the child pom but **still** has to add the dependency in the child pom
+    
+Just like dependecy management, there is also `pluginManagement`-- if you want to make same version or configuration across the multi module project then use pluginManagement same as dependency management
+
 
     
     
