@@ -125,10 +125,39 @@ so parent pom -- junit version 3.3
     ```
     No need to maintain the version the child pom but **still** has to add the dependency in the child pom
     
-Just like dependecy management, there is also `pluginManagement`-- if you want to make same version or configuration across the multi module project then use pluginManagement same as dependency management
+Just like dependency management, there is also `pluginManagement`-- if you want to make same version or configuration across the multi-module project then use pluginManagement same as dependency management
 
 
-    
+Profile
+---
+application should be run across the env. dev, testing, prod -- this can be done using profile
+for example database for the dev is H2 for testing and prod it will be HANA 
+then you will have two profile for connecting the database for dev and prod profile in pom 
+
+one way to do that created a profile folder in the src/main/profile then have sub folder like dev, test, prod 
+inside each subfolder there should be different application.properties files
+
+```
+<profiles>
+  <profile>
+      <id>dev</id>
+      <properties>
+          <build.profile.id>dev</build.profile.id>
+      </properties>
+      <build>
+          <resources>
+              <resource>
+                  <directory> </directory>
+              </resource>
+          </resources
+      </build>    
+  </profile>
+</profiles>
+```
+
+how to use the profile while building `mvn install -pdev`
+
+
     
 
 
