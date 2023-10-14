@@ -87,16 +87,46 @@ Multi module project
 
   folder organisation in case multimodule project
   ```
-    userParent      pom.xml
+    Parent      pom.xml
           child 1   pom.xml
           child 2   pom.xml
   ```
      
 **Note:** in the target folder all the compiled code that .class files along the jar dependency libraries are present inside the lib folder
 
+scope
+---
+there are six scope in Maven like
+  - compile: dependency will be available during build, test , and run by default if you don't define any scope then   
+    compile will be the scope
+  - provided: during test, run then are not needed for deployment example tomcat or servers dependency
+  - runtime: test, run
+  - test : compile and run the test
+  - System : if want to point to path of a library which is not a part of maven dependency or not available in the maven repo then it can be used `<systemPath>` with possible values as a directory
+  - import: used for dependenyManagement
 
+     
+Dependency Management
+---
+In a project there could be multiple projects going on, and there might be the case where there version missmatch in the dependency used by different different project
 
+so parent pom -- junit version 3.3
+    child 1 pom  junit version 3.4 
+    child 2 pom  junit version 4.4 
 
+    so to handle this kind of version mismatch issue in case of multi module project
+    ```
+    maintain dependency in the parent pom
+    <dependencyManagement>
+        <dependency>
+          <version></version>
+        </dependency>
+    </dependencyManagement>
+    ```
+    No need to maintain the version the child pom but **still** has to add the dependency in the child pom
+
+    
+    
 
 
 
