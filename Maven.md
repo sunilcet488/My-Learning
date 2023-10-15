@@ -158,6 +158,12 @@ inside each subfolder there should be different application.properties files
 how to use the profile while building `mvn install -pdev`
 
 
+Springboot
+---
+  - Spring boot starter contains all the transitive dependencies for building the spring boot application
+  - @SpringBootApplication
+![image](https://github.com/sunilcet488/My-Learning/assets/18717063/05b9518b-c17a-4ad5-b2a0-3f07817a6820)
+
     
 
 
